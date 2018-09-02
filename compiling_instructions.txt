@@ -1,0 +1,10 @@
+# create class such as in foo.cpp
+compiling:
+
+gcc compiler
+commands linux: g++ -c -fPIC foo.cpp -o foo.o
+                g++ -shared -Wl,-soname,libfoo.so -o libfoo.so foo.o
+
+visual studio
+commands windows: vcvars64
+                  cl /LD foo.cpp
